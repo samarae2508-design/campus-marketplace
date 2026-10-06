@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Marketplace - Team 3</title>
+    <!-- Built-in styles that work perfectly offline and anywhere -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        nav {
+            background-color: #4f46e5;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .team-badge {
+            background-color: #6366f1;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            margin-left: 10px;
+        }
+        .btn-add {
+            background-color: #10b981;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .search-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            display: flex;
+            gap: 15px;
+        }
+        .search-box {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #e5e7eb;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .category {
+            background: #eef2ff;
+            color: #4f46e5;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #111827;
+        }
+        .item-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .desc {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        .card-footer {
+            background: #f9fafb;
+            padding: 15px 20px;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .seller-info {
+            font-size: 12px;
+            color: #4b5563;
+        }
+        .btn-copy {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-title">🎓 Campus Marketplace <span class="team-badge">Team 3: Epics Achievers</span></div>
+        <button class="btn-add">+ List an Item</button>
+    </nav>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search items by name or description...">
+        </div>
+
+        <div class="grid">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header">
+                        <span class="category">Textbooks</span>
+                        <span class="price">$45.00</span>
+                    </div>
+                    <div class="item-title">Introduction to Algorithms</div>
+                    <p class="desc">Lightly used for CS201. No highlighting inside, clean pages. Perfect condition.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="seller-info"><strong>Seller:</strong> Alex Rivera</div>
+                    <button class="btn-copy" onclick="alert('Contact copied!')">📋 Copy Contact</button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header">
+                        <span class="category">Electronics</span>
+                        <span class="price">$75.00</span>
+                    </div>
+                    <div class="item-title">Dell 24-inch Monitor</div>
+                    <p class="desc">Great secondary monitor for coding or gaming. Comes with HDMI cable and power brick.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="seller-info"><strong>Seller:</strong> Jordan Lee</div>
+                    <button class="btn-copy" onclick="alert('Contact copied!')">📋 Copy Contact</button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-header">
+                        <span class="category">Dorm Essentials</span>
+                        <span class="price">$60.00</span>
+                    </div>
+                    <div class="item-title">Mini Fridge (3.2 Cu. Ft.)</div>
+                    <p class="desc">Fits perfectly under standard dorm beds. Keeps drinks ice cold. Must pick up from Quad Hall.</p>
+                </div>
+                <div class="card-footer">
+                    <div class="seller-info"><strong>Seller:</strong> Taylor Swift</div>
+                    <button class="btn-copy" onclick="alert('Contact copied!')">📋 Copy Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
